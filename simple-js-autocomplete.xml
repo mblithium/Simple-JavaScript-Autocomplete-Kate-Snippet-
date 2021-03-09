@@ -1,0 +1,369 @@
+<snippets license="LGPL v3+" namespace="" name="Simple JavaScript Autocomplete" filetypes="" authors="Matheus Bastos">
+    <!--
+        // To limit these files to only. Note that the file must have these extensions to work.
+        
+        filetypes="JavaScript;HTML" 
+    -->
+    <script>
+        function fileName() { return document.fileName(); }
+        function fileUrl() { return document.url(); }
+        function encoding() { return document.encoding(); }
+        function selection() { return view.selectedText(); }
+        function year() { return new Date().getFullYear(); }
+        function upper(x) { return x.toUpperCase(); }
+        function lower(x) { return x.toLowerCase(); }
+    </script>
+    <item>
+        <displayprefix></displayprefix>
+        <match>import</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>import ${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>var</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>var ${ } = ${'value'}
+${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>const</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>const ${ } = ${'value'}
+${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>let</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>let ${ } = ${'value'}
+${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix>.forEach</displayprefix>
+        <match>.forEach</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>.forEach(${currentValue}, ${index}, ${array}) {
+    ${cursor}
+}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>function</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>function ${'name'}(${args}) {
+    ${'commands'}
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>class</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>class ${'name'} {
+    constructor(${'args'}) {
+        ${'your code here'}
+    }
+}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>class:extends</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>class ${'name'} extends ${'class'} {
+    constructor(${'args'}) {
+        super(${'args'})
+        ${'your code here'}
+    }
+}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>for</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>for(${variables}; ${condition}; ${Increment/Decrement}) {
+    ${'your code here...'}
+}
+</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>for...in</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>for(${'variable'} in ${'obj'}) {
+    ${cursor}
+}
+</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>!arrowFunction:parameters</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>(${'parameters'}) =&gt; {
+    ${'code here'}
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>!arrowFunction</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>() =&gt; {
+    ${'code here'}
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>if</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>if (${condition}) {
+    ${'if true'}
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>if:else</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>if (${condition}) {
+    ${'if true'}
+} else {
+    ${'else'}
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>else</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>else {
+    ${'your code here...'}
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>do...while</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>do {
+    ${'statement'}
+} while (${'condition'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>while</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>while (${'condition'}) {
+    ${cursor}
+}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>try...catch</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>try {
+    ${'try statements'}
+} catch (${'args'}) {
+    ${'catch statements'} 
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>try...finally</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>try {
+    ${'try statements'}
+} finally {
+    ${'finally statements'}
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>try...catch...finally</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>try {
+    ${'try statements'}
+} catch (${'args'}) {
+    ${'catch statement'}
+} finally {
+    ${'finally statements'}
+}${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>switch</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>switch (${'expr'}) {
+    ${cursor}
+}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>switch...case</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>switch (${'expr'}) {
+    case ${'value 1}: {
+    
+        break;
+    }
+    ${cursor}
+    default:
+        ${'your default statement'}
+}</fillin>
+    </item>
+     <item>
+        <displayprefix></displayprefix>
+        <match>break</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>break${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>case</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>case ${'value'}: {
+    ${cursor}
+}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>async</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>async ${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>continue</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>continue ${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>JSON.parse</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>JSON.parse(${'value here...'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>JSON.stringify</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>JSON.stringify(${'value here...'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>throw</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>throw ${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>console.log()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>console.log(${' '})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>!log</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>console.log(${' '})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>console.error()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>console.error(${' '})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>console.warn()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>console.warn(${' '})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>console.clear()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>console.clear()${cursor}</fillin>
+    </item>
+    <!-- DOM -->
+    <item>
+        <displayprefix></displayprefix>
+        <match>document.getElementById()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>document.getElementById(${'String Element'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>document.getElementsByClassName()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>document.getElementsByClassName(${'String ClassName'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>document.getElementsByTagName()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>document.getElementsByTagName(${'String tagName'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>document.querySelectorAll()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>document.querySelectorAll(${'String selector'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>document.write()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>document.write(${'String text'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>document.writeIn()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>document.writeIn(${'String text'})${cursor}</fillin>
+    </item>
+    <item>
+        <displayprefix></displayprefix>
+        <match>document.writeIn()</match>
+        <displaypostfix></displaypostfix>
+        <displayarguments></displayarguments>
+        <fillin>document.writeIn(${'String text'})${cursor}</fillin>
+    </item>
+</snippets>
+
