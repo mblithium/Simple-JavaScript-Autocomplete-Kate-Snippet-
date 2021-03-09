@@ -49,9 +49,10 @@ ${cursor}</fillin>
         <match>.forEach</match>
         <displaypostfix></displaypostfix>
         <displayarguments></displayarguments>
-        <fillin>.forEach(${currentValue}, ${index}, ${array}) {
+        <fillin>.forEach((${currentValue}, ${index}, ${array}) => {
     ${cursor}
-}</fillin>
+})
+</fillin>
     </item>
     <item>
         <displayprefix></displayprefix>
