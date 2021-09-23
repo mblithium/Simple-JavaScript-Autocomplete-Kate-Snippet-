@@ -4,7 +4,7 @@
 Simple JavaScript Autocomplete is an xml snippet that tries to autocomplete and create  javascript-ready templates in Kate Editor (KDE).
 
 ## Installing from Kate
-Open the "snippets" tab and click "Get New Snippets", search for "Simple JavaScript Autocomplete" and click on Intall (wait until the process is complete).
+Open the "snippets" tab and click "Get New Snippets", search for "Simple JavaScript Autocomplete" and click on Install (wait until the process is complete).
 
 ![How to Install 1](https://github.com/mblithium/Simple-JavaScript-Autocomplete-Kate-Snippet-/raw/main/img/Install/Install-Pass_1.png)
 
